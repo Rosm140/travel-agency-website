@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | TravelGo</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <section class="page">
+    <h2>Contact Us</h2>
+    <p>Send your enquiry, we’ll contact you soon.</p>
+
+    <form class="form" onsubmit="event.preventDefault(); alert('✅ Form submitted (demo)');">
+      <div class="grid-2">
+        <input class="input" type="text" placeholder="Full Name" required />
+        <input class="input" type="email" placeholder="Email" required />
+      </div>
+      <input class="input" type="text" placeholder="Destination (example: Goa)" required />
+      <textarea class="input" placeholder="Message" rows="5" required></textarea>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </section>
+
+  <div id="footer"></div>
+  <script src="../assets/js/include.js"></script>
+</body>
+</html>
