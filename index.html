@@ -1,234 +1,216 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TravelGo | Travel Agency Website</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Travel Agency — Explore the World</title>
+  <meta name="description" content="Explore curated destinations, book trips, and discover travel experiences with our travel agency." />
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <meta property="og:title" content="Travel Agency — Explore the World" />
+  <meta property="og:description" content="Explore curated destinations, book trips, and discover travel experiences with our travel agency." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Travel Agency",
+    "url": "https://yourdomain.example",
+    "logo": "https://yourdomain.example/assets/images/logo.png",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+1-555-555-5555",
+      "contactType": "customer service"
+    }]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- header from component -->
-  <div id="header"></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Travel Agency home">
+        <img src="assets/images/logo.svg" alt="Travel Agency logo" width="140" />
+      </a>
 
-  <section class="hero">
-    <div class="hero-box">
-      <h1>Explore the World with Modern Travel Planning</h1>
-      <span class="pill">Award-winning journeys • 120+ destinations</span>
-      <h1>Explore the world with tailor-made escapes and seamless booking.</h1>
-      <p>
-        Discover amazing destinations, curated packages, and book your next trip
-        in minutes with TravelGo.
-        Plan once, experience forever. Discover curated itineraries, boutique stays,
-        and local guides to unlock unforgettable adventures with TravelGo.
-      </p>
-      <div class="cta">
-        <a class="btn" href="./pages/packages.html">View Packages</a>
-        <button class="btn-outline" id="bookBtn">Quick Book Demo</button>
-        <a class="btn-outline" href="./pages/destinations.html">Browse Destinations</a>
-        <button class="btn-ghost" id="bookBtn">Quick Book Demo</button>
-      </div>
-      <div class="hero-badges">
-        <div>
-          <h4>4.9/5</h4>
-          <p class="muted">Traveler reviews</p>
-        </div>
-        <div>
-          <h4>1.2M+</h4>
-          <p class="muted">Trips planned</p>
-        </div>
-        <div>
-          <h4>24/7</h4>
-          <p class="muted">Concierge support</p>
-        </div>
-      </div>
-    </div>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="site-nav" class="nav-toggle">
+        <span class="hamburger" aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
 
-    <div class="card">
-      <h3>Why TravelGo?</h3>
-      <p>✅ Premium packages</p>
-      <p>✅ Instant bookings</p>
-      <p>✅ Trusted guides</p>
-      <p>✅ 24x7 support</p>
-    <div class="hero-media">
-      <img
-        src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1000&q=80"
-        alt="Coastal destination"
-      />
-      <div class="floating-card">
-        <h3>Next stop: Santorini</h3>
-        <p>Sunset catamaran • Boutique stay • Food tour</p>
-        <a class="btn-sm" href="./pages/gallery.html">View Gallery</a>
-      </div>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn btn-sm cta" href="booking.html">Book Now</a></li>
+        </ul>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <section class="section info-strip">
-    <div class="info-item">
-      <h3>Flexible payments</h3>
-      <p>Reserve now, pay later with 0% installment plans.</p>
-    </div>
-    <div class="info-item">
-      <h3>Premium partners</h3>
-      <p>Handpicked hotels, cruises, and guides worldwide.</p>
-    </div>
-    <div class="info-item">
-      <h3>VIP airport lounge</h3>
-      <p>Enjoy priority check-ins and dedicated assistance.</p>
-    </div>
-  </section>
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-label="Explore the world">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Discover your next adventure</h1>
+          <p>Handpicked trips, personalized itineraries, and expert support—every step of the way.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="booking.html">Start booking</a>
+            <a class="btn btn-outline" href="destinations.html">View destinations</a>
+          </div>
+        </div>
 
-  <section class="section">
-    <div class="section-heading">
-      <div>
-        <span class="eyebrow">Trending now</span>
-        <h2>Top destinations handpicked for 2024</h2>
-        <p class="muted">From iconic skylines to hidden beaches, explore our most booked journeys.</p>
-      </div>
-      <a class="btn-outline" href="./pages/destinations.html">See all destinations</a>
-    </div>
-    <div class="destination-grid">
-      <article class="destination-card">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Maldives" />
-        <div>
-          <h3>Maldives Escape</h3>
-          <p>Overwater villas • Private cruise • 5 nights</p>
-          <a class="link" href="./pages/packages.html">Explore package →</a>
-        </div>
-      </article>
-      <article class="destination-card">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Switzerland" />
-        <div>
-          <h3>Swiss Alps Retreat</h3>
-          <p>Scenic rail • Mountain lodge • 7 nights</p>
-          <a class="link" href="./pages/blog.html">Read itinerary →</a>
-        </div>
-      </article>
-      <article class="destination-card">
-        <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=800&q=80" alt="Kyoto" />
-        <div>
-          <h3>Kyoto Culture Trail</h3>
-          <p>Tea ceremony • Heritage stays • 5 nights</p>
-          <a class="link" href="./pages/gallery.html">See moments →</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="card-grid">
-  <section class="section card-grid">
-    <div class="card">
-      <h3>Luxury Trips</h3>
-      <p>High-end travel experiences with premium hotels and guides.</p>
-      <a class="link" href="./pages/packages.html">Browse luxury →</a>
-    </div>
-    <div class="card">
-      <h3>Adventure Tours</h3>
-      <p>Trekking, scuba diving, jungle safari and more.</p>
-      <a class="link" href="./pages/destinations.html">Find adventures →</a>
-    </div>
-    <div class="card">
-      <h3>Family Packages</h3>
-      <p>Affordable and safe travel plans for your loved ones.</p>
-      <a class="link" href="./pages/faq.html">Plan with confidence →</a>
-    </div>
-  </section>
-
-  <section class="section experience">
-    <div>
-      <span class="eyebrow">How it works</span>
-      <h2>Plan, personalize, and take off in three steps</h2>
-      <p class="muted">Our travel experts craft every detail so you can focus on the memories.</p>
-      <div class="steps">
-        <div>
-          <h4>1. Share your dream</h4>
-          <p>Tell us where you want to go and what you love.</p>
-        </div>
-        <div>
-          <h4>2. Customize itinerary</h4>
-          <p>Mix and match stays, tours, and experiences.</p>
-        </div>
-        <div>
-          <h4>3. Travel with ease</h4>
-          <p>We handle flights, transfers, and 24/7 support.</p>
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/images/hero.jpg" alt="Scenic travel destination" loading="lazy" />
         </div>
       </div>
-      <div class="cta">
-        <a class="btn" href="./pages/contact.html">Start planning</a>
-        <a class="btn-outline" href="./pages/about.html">Meet the team</a>
-      </div>
-    </div>
-    <div class="stats">
-      <div>
-        <h3>98%</h3>
-        <p class="muted">Customer satisfaction</p>
-      </div>
-      <div>
-        <h3>350+</h3>
-        <p class="muted">Local partners</p>
-      </div>
-      <div>
-        <h3>48 hrs</h3>
-        <p class="muted">Average response time</p>
-      </div>
-      <div>
-        <h3>20+</h3>
-        <p class="muted">Years of expertise</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section deal-banner">
-    <div>
-      <span class="eyebrow">Limited-time offer</span>
-      <h2>Save up to 30% on summer getaways</h2>
-      <p>Book before April 30 to unlock flexible cancellation and free upgrades.</p>
-    </div>
-    <div class="cta">
-      <a class="btn" href="./pages/signup.html">Unlock deals</a>
-      <a class="btn-outline" href="./pages/login.html">Member login</a>
-    </div>
-  </section>
+    <!-- Featured Destinations -->
+    <section class="section container" id="featured-destinations" aria-labelledby="fd-heading">
+      <h2 id="fd-heading">Featured Destinations</h2>
+      <div class="grid grid-3">
+        <article class="card">
+          <img src="assets/images/dest-1.jpg" alt="Paris skyline" loading="lazy" />
+          <div class="card-body">
+            <h3>Paris, France</h3>
+            <p>Culture, cuisine and romance — 5, 7, and 10 day itineraries available.</p>
+            <a class="card-link" href="destinations/paris.html" aria-label="View Paris packages">See packages →</a>
+          </div>
+        </article>
 
-  <section class="section testimonial">
-    <div class="section-heading">
-      <div>
-        <span class="eyebrow">Traveler stories</span>
-        <h2>What our explorers say about TravelGo</h2>
-      </div>
-      <a class="btn-outline" href="./pages/blog.html">Read more reviews</a>
-    </div>
-    <div class="testimonial-grid">
-      <div class="quote-card">
-        <p>“Everything was organized perfectly—our Maldives trip felt effortless from start to finish.”</p>
-        <h4>— Alina & Jacob</h4>
-      </div>
-      <div class="quote-card">
-        <p>“The local guides were incredible. We discovered hidden gems in Kyoto we never would have found.”</p>
-        <h4>— Priya S.</h4>
-      </div>
-      <div class="quote-card">
-        <p>“We loved the flexible booking. The team adjusted our itinerary within hours.”</p>
-        <h4>— Marcus L.</h4>
-      </div>
-    </div>
-  </section>
+        <article class="card">
+          <img src="assets/images/dest-2.jpg" alt="Bali beach" loading="lazy" />
+          <div class="card-body">
+            <h3>Bali, Indonesia</h3>
+            <p>Beach escapes, wellness retreats, and island adventures.</p>
+            <a class="card-link" href="destinations/bali.html">See packages →</a>
+          </div>
+        </article>
 
-  <section class="section newsletter">
-    <div>
-      <h2>Get weekly travel inspiration</h2>
-      <p class="muted">Insider guides, seasonal deals, and new experiences delivered every Tuesday.</p>
+        <article class="card">
+          <img src="assets/images/dest-3.jpg" alt="New Zealand landscape" loading="lazy" />
+          <div class="card-body">
+            <h3>New Zealand</h3>
+            <p>Road trips, nature hikes, and photography tours.</p>
+            <a class="card-link" href="destinations/new-zealand.html">See packages →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Why choose us -->
+    <section class="section bg-alt" aria-labelledby="why-heading">
+      <div class="container">
+        <h2 id="why-heading">Why choose us</h2>
+        <div class="grid grid-3 features">
+          <div class="feature">
+            <h3>Personalized itineraries</h3>
+            <p>Trips tailored to your interests, pace and budget.</p>
+          </div>
+          <div class="feature">
+            <h3>Local experts</h3>
+            <p>On-the-ground partners and 24/7 support.</p>
+          </div>
+          <div class="feature">
+            <h3>Best price guarantee</h3>
+            <p>Transparent pricing and no hidden fees.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section container" aria-labelledby="test-heading">
+      <h2 id="test-heading">What travelers say</h2>
+      <div class="grid grid-2">
+        <blockquote class="testimonial">
+          <p>"Amazing trip—everything handled. The itinerary was perfect!"</p>
+          <cite>— Sarah L.</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"Superb customer support when we needed to change dates."</p>
+          <cite>— Mark W.</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Quick inquiry form -->
+    <section class="section container" aria-labelledby="quick-heading">
+      <h2 id="quick-heading">Quick inquiry</h2>
+      <form id="quick-contact" class="form-grid" action="/api/contact" method="post" data-ajax="true" novalidate>
+        <label class="form-row">
+          <span class="sr-only">Full name</span>
+          <input name="name" id="name" type="text" placeholder="Full name" required />
+        </label>
+
+        <label class="form-row">
+          <span class="sr-only">Email</span>
+          <input name="email" id="email" type="email" placeholder="Email" required />
+        </label>
+
+        <label class="form-row">
+          <span class="sr-only">Destination</span>
+          <select name="destination" id="destination" required>
+            <option value="">Choose destination</option>
+            <option value="paris">Paris</option>
+            <option value="bali">Bali</option>
+            <option value="newzealand">New Zealand</option>
+          </select>
+        </label>
+
+        <label class="form-row">
+          <span class="sr-only">Message</span>
+          <input name="message" id="message" type="text" placeholder="Message (optional)" />
+        </label>
+
+        <div class="form-row form-actions">
+          <button class="btn btn-primary" type="submit">Send inquiry</button>
+        </div>
+      </form>
+
+      <div id="form-message" role="status" aria-live="polite" class="form-message"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <img src="assets/images/logo-footer.svg" alt="Travel Agency" width="120" />
+        <p>Plan your next journey with confidence.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <address>
+          <a href="mailto:hello@yourdomain.example">hello@yourdomain.example</a><br/>
+          <a href="tel:+15555555555">+1 555 555 5555</a>
+        </address>
+      </div>
     </div>
-    <form class="newsletter-form">
-      <input class="input" type="email" placeholder="Email address" required />
-      <button class="btn" type="submit">Subscribe</button>
-    </form>
-  </section>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> Travel Agency. All rights reserved.</small>
+    </div>
+  </footer>
 
-  <!-- footer from component -->
-  <div id="footer"></div>
-
-  <script src="./assets/js/main.js"></script>
-  <script src="./assets/js/include.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
-</html>
+</html>s
