@@ -3,214 +3,352 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Travel Agency — Explore the World</title>
-  <meta name="description" content="Explore curated destinations, book trips, and discover travel experiences with our travel agency." />
+  <title>TravelGo – Discover Your Next Adventure</title>
+  <meta name="description" content="Explore handpicked destinations, personalized itineraries, and expert travel support. Your journey begins with TravelGo." />
   <link rel="icon" href="assets/images/favicon.ico" />
-  <meta property="og:title" content="Travel Agency — Explore the World" />
-  <meta property="og:description" content="Explore curated destinations, book trips, and discover travel experiences with our travel agency." />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="TravelGo – Discover Your Next Adventure" />
+  <meta property="og:description" content="Explore handpicked destinations, personalized itineraries, and expert travel support." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/images/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- CSS -->
+  
+  <!-- Enhanced CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
-
-  <!-- Structured data -->
+  
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
-    "name": "Travel Agency",
-    "url": "https://yourdomain.example",
-    "logo": "https://yourdomain.example/assets/images/logo.png",
+    "name": "TravelGo",
+    "url": "https://travelgo.example",
+    "logo": "https://travelgo.example/assets/images/logo.png",
+    "description": "Discover your next adventure with personalized travel experiences",
     "contactPoint": [{
       "@type": "ContactPoint",
       "telephone": "+1-555-555-5555",
-      "contactType": "customer service"
-    }]
+      "contactType": "customer service",
+      "email": "support@travelgo.com"
+    }],
+    "sameAs": [
+      "https://facebook.com/travelgo",
+      "https://instagram.com/travelgo",
+      "https://twitter.com/travelgo"
+    ]
   }
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Skip to main content for accessibility -->
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header">
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Travel Agency home">
-        <img src="assets/images/logo.svg" alt="Travel Agency logo" width="140" />
-      </a>
+      <!-- Logo/Brand -->
+     <a href="index.html" class="brand">
+  <img src="assets/images/logo.svg" alt="TravelGo" width="180" height="54" />
+</a>
 
-      <button id="nav-toggle" aria-expanded="false" aria-controls="site-nav" class="nav-toggle">
+      <!-- Mobile Navigation Toggle -->
+      <button id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation" class="nav-toggle">
         <span class="hamburger" aria-hidden="true"></span>
-        <span class="sr-only">Toggle navigation</span>
       </button>
 
+      <!-- Main Navigation -->
       <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="destinations.html">Destinations</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a class="btn btn-sm cta" href="booking.html">Book Now</a></li>
+          <li><a href="pages/destinations.html">Destinations</a></li>
+          <li><a href="pages/packages.html">Packages</a></li>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/blog.html">Blog</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a class="btn btn-sm cta" href="pages/booking.html">Book Now</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main id="main">
-    <!-- Hero -->
-    <section class="hero" aria-label="Explore the world">
+    
+    <!-- HERO SECTION -->
+    <section class="hero" aria-labelledby="hero-heading">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <h1>Discover your next adventure</h1>
-          <p>Handpicked trips, personalized itineraries, and expert support—every step of the way.</p>
+          <h1 id="hero-heading">Discover your next adventure</h1>
+          <p>Handpicked trips, personalized itineraries, and expert support—every step of the way. Your journey starts here.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="booking.html">Start booking</a>
-            <a class="btn btn-outline" href="destinations.html">View destinations</a>
+            <a class="btn btn-primary" href="pages/booking.html">Start Booking</a>
+            <a class="btn btn-outline" href="pages/destinations.html">View Destinations</a>
           </div>
         </div>
 
         <div class="hero-media" aria-hidden="true">
-          <img src="assets/images/hero.jpg" alt="Scenic travel destination" loading="lazy" />
+          <img src="assets/images/hero.jpg" alt="Beautiful scenic travel destination with mountains and clear sky" loading="eager" width="600" height="450" />
         </div>
       </div>
     </section>
 
-    <!-- Featured Destinations -->
-    <section class="section container" id="featured-destinations" aria-labelledby="fd-heading">
-      <h2 id="fd-heading">Featured Destinations</h2>
+    <!-- FEATURED DESTINATIONS -->
+    <section class="section container" id="featured-destinations" aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured Destinations</h2>
       <div class="grid grid-3">
+        
         <article class="card">
-          <img src="assets/images/dest-1.jpg" alt="Paris skyline" loading="lazy" />
+          <img src="assets/images/dest-1.jpg" alt="Eiffel Tower and Paris cityscape at sunset" loading="lazy" width="400" height="240" />
           <div class="card-body">
             <h3>Paris, France</h3>
-            <p>Culture, cuisine and romance — 5, 7, and 10 day itineraries available.</p>
-            <a class="card-link" href="destinations/paris.html" aria-label="View Paris packages">See packages →</a>
+            <p>Culture, cuisine, and romance await. Explore 5, 7, and 10-day curated itineraries through the City of Light.</p>
+            <a class="card-link" href="pages/destinations/paris.html" aria-label="View Paris travel packages">
+              See packages
+            </a>
           </div>
         </article>
 
         <article class="card">
-          <img src="assets/images/dest-2.jpg" alt="Bali beach" loading="lazy" />
+          <img src="assets/images/dest-2.jpg" alt="Pristine Bali beach with crystal clear water and palm trees" loading="lazy" width="400" height="240" />
           <div class="card-body">
             <h3>Bali, Indonesia</h3>
-            <p>Beach escapes, wellness retreats, and island adventures.</p>
-            <a class="card-link" href="destinations/bali.html">See packages →</a>
+            <p>Beach escapes, wellness retreats, and island adventures in tropical paradise.</p>
+            <a class="card-link" href="pages/destinations/bali.html" aria-label="View Bali travel packages">
+              See packages
+            </a>
           </div>
         </article>
 
         <article class="card">
-          <img src="assets/images/dest-3.jpg" alt="New Zealand landscape" loading="lazy" />
+          <img src="assets/images/dest-3.jpg" alt="Breathtaking New Zealand mountains and lakes landscape" loading="lazy" width="400" height="240" />
           <div class="card-body">
             <h3>New Zealand</h3>
-            <p>Road trips, nature hikes, and photography tours.</p>
-            <a class="card-link" href="destinations/new-zealand.html">See packages →</a>
+            <p>Epic road trips, stunning nature hikes, and unforgettable photography tours.</p>
+            <a class="card-link" href="pages/destinations/new-zealand.html" aria-label="View New Zealand travel packages">
+              See packages
+            </a>
           </div>
         </article>
+
       </div>
     </section>
 
-    <!-- Why choose us -->
+    <!-- WHY CHOOSE US -->
     <section class="section bg-alt" aria-labelledby="why-heading">
       <div class="container">
-        <h2 id="why-heading">Why choose us</h2>
+        <h2 id="why-heading">Why Choose TravelGo</h2>
         <div class="grid grid-3 features">
+          
           <div class="feature">
-            <h3>Personalized itineraries</h3>
-            <p>Trips tailored to your interests, pace and budget.</p>
+            <h3>🎯 Personalized Itineraries</h3>
+            <p>Every trip is tailored to your unique interests, travel pace, and budget. No cookie-cutter tours here.</p>
           </div>
+
           <div class="feature">
-            <h3>Local experts</h3>
-            <p>On-the-ground partners and 24/7 support.</p>
+            <h3>🌍 Local Experts</h3>
+            <p>Benefit from on-the-ground partners who know hidden gems, plus 24/7 support when you need it.</p>
           </div>
+
           <div class="feature">
-            <h3>Best price guarantee</h3>
-            <p>Transparent pricing and no hidden fees.</p>
+            <h3>💰 Best Price Guarantee</h3>
+            <p>Transparent pricing with no hidden fees. If you find a better deal, we'll match it.</p>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="section container" aria-labelledby="test-heading">
-      <h2 id="test-heading">What travelers say</h2>
+    <!-- TESTIMONIALS -->
+    <section class="section container" aria-labelledby="testimonials-heading">
+      <h2 id="testimonials-heading">What Travelers Say</h2>
       <div class="grid grid-2">
+        
         <blockquote class="testimonial">
-          <p>"Amazing trip—everything handled. The itinerary was perfect!"</p>
-          <cite>— Sarah L.</cite>
+          <p>"Amazing trip—everything was perfectly handled from start to finish. The itinerary was spot-on and exceeded all our expectations!"</p>
+          <cite>— Sarah L., San Francisco</cite>
         </blockquote>
+
         <blockquote class="testimonial">
-          <p>"Superb customer support when we needed to change dates."</p>
-          <cite>— Mark W.</cite>
+          <p>"Superb customer support when we needed to change our dates last minute. They went above and beyond to accommodate us."</p>
+          <cite>— Mark W., New York</cite>
         </blockquote>
+
+        <blockquote class="testimonial">
+          <p>"The local guides were incredible and showed us places we never would have found on our own. Truly authentic experiences."</p>
+          <cite>— Jennifer K., Austin</cite>
+        </blockquote>
+
+        <blockquote class="testimonial">
+          <p>"Best value for money. No hidden costs, everything transparent. Will definitely book with TravelGo again!"</p>
+          <cite>— David M., Chicago</cite>
+        </blockquote>
+
       </div>
     </section>
 
-    <!-- Quick inquiry form -->
-    <section class="section container" aria-labelledby="quick-heading">
-      <h2 id="quick-heading">Quick inquiry</h2>
-      <form id="quick-contact" class="form-grid" action="/api/contact" method="post" data-ajax="true" novalidate>
+    <!-- QUICK INQUIRY FORM -->
+    <section class="section container" aria-labelledby="inquiry-heading">
+      <h2 id="inquiry-heading">Quick Inquiry</h2>
+      <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Ready to start planning? Fill out the form below and our travel experts will get back to you within 24 hours.
+      </p>
+      
+      <form id="quick-contact" class="form-grid" action="/api/contact" method="post" novalidate>
+        
         <label class="form-row">
-          <span class="sr-only">Full name</span>
-          <input name="name" id="name" type="text" placeholder="Full name" required />
+          <span class="sr-only">Full Name</span>
+          <input 
+            name="name" 
+            id="name" 
+            type="text" 
+            placeholder="Full Name *" 
+            required 
+            aria-required="true"
+            autocomplete="name"
+          />
         </label>
 
         <label class="form-row">
-          <span class="sr-only">Email</span>
-          <input name="email" id="email" type="email" placeholder="Email" required />
+          <span class="sr-only">Email Address</span>
+          <input 
+            name="email" 
+            id="email" 
+            type="email" 
+            placeholder="Email Address *" 
+            required 
+            aria-required="true"
+            autocomplete="email"
+          />
+        </label>
+
+        <label class="form-row">
+          <span class="sr-only">Phone Number (Optional)</span>
+          <input 
+            name="phone" 
+            id="phone" 
+            type="tel" 
+            placeholder="Phone Number (optional)" 
+            autocomplete="tel"
+          />
         </label>
 
         <label class="form-row">
           <span class="sr-only">Destination</span>
-          <select name="destination" id="destination" required>
-            <option value="">Choose destination</option>
-            <option value="paris">Paris</option>
-            <option value="bali">Bali</option>
+          <select 
+            name="destination" 
+            id="destination" 
+            required 
+            aria-required="true"
+          >
+            <option value="">Choose Destination *</option>
+            <option value="paris">Paris, France</option>
+            <option value="bali">Bali, Indonesia</option>
             <option value="newzealand">New Zealand</option>
+            <option value="tokyo">Tokyo, Japan</option>
+            <option value="italy">Italy</option>
+            <option value="dubai">Dubai, UAE</option>
+            <option value="other">Other / Undecided</option>
           </select>
         </label>
 
-        <label class="form-row">
+        <label class="form-row" style="grid-column: 1 / -1;">
           <span class="sr-only">Message</span>
-          <input name="message" id="message" type="text" placeholder="Message (optional)" />
+          <input 
+            name="message" 
+            id="message" 
+            type="text" 
+            placeholder="Tell us about your dream trip (optional)" 
+          />
         </label>
 
         <div class="form-row form-actions">
-          <button class="btn btn-primary" type="submit">Send inquiry</button>
+          <button class="btn btn-primary" type="submit">Send Inquiry</button>
         </div>
       </form>
 
       <div id="form-message" role="status" aria-live="polite" class="form-message"></div>
     </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="section container" style="text-align: center; max-width: 700px;">
+      <h2>Stay Inspired</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+        Get travel tips, destination guides, and exclusive deals delivered to your inbox.
+      </p>
+      <form class="form-grid" style="max-width: 500px; grid-template-columns: 1fr auto;">
+        <label class="form-row">
+          <span class="sr-only">Email for newsletter</span>
+          <input type="email" placeholder="Your email address" required />
+        </label>
+        <div class="form-row">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </div>
+      </form>
+    </section>
+
   </main>
 
-  <footer class="site-footer">
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
+      
       <div class="footer-col">
-        <img src="assets/images/logo-footer.svg" alt="Travel Agency" width="120" />
-        <p>Plan your next journey with confidence.</p>
+        <img src="assets/images/logo-footer.svg" alt="TravelGo" width="120" height="36" style="margin-bottom: 1rem;" />
+        <p>Your modern travel partner for discovering the world. Plan your next journey with confidence and style.</p>
+        <p style="margin-top: 1rem;">
+          <strong style="color: white;">Email:</strong> support@travelgo.com<br/>
+          <strong style="color: white;">Phone:</strong> +1-555-555-5555
+        </p>
       </div>
+
       <div class="footer-col">
-        <h4>Company</h4>
+        <h4>Quick Links</h4>
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="terms.html">Terms</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/packages.html">Travel Packages</a></li>
+          <li><a href="pages/destinations.html">Destinations</a></li>
+          <li><a href="pages/gallery.html">Gallery</a></li>
+          <li><a href="pages/blog.html">Travel Blog</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
         </ul>
       </div>
+
       <div class="footer-col">
-        <h4>Contact</h4>
-        <address>
-          <a href="mailto:hello@yourdomain.example">hello@yourdomain.example</a><br/>
-          <a href="tel:+15555555555">+1 555 555 5555</a>
-        </address>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="pages/faq.html">FAQ</a></li>
+          <li><a href="pages/terms.html">Terms of Service</a></li>
+          <li><a href="pages/privacy.html">Privacy Policy</a></li>
+          <li><a href="pages/login.html">Login</a></li>
+          <li><a href="pages/signup.html">Sign Up</a></li>
+        </ul>
       </div>
+
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://facebook.com/travelgo" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://instagram.com/travelgo" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://twitter.com/travelgo" target="_blank" rel="noopener">Twitter</a></li>
+          <li><a href="https://youtube.com/travelgo" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+
     </div>
+
     <div class="container footer-bottom">
-      <small>© <span id="year"></span> Travel Agency. All rights reserved.</small>
+      <p>&copy; <span id="year"></span> TravelGo. Made with ❤️ by Rohit</p>
     </div>
   </footer>
 
+  <!-- Enhanced JavaScript -->
   <script src="assets/js/main.js" defer></script>
+  
+  <!-- Inline critical JavaScript for better UX -->
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-</html>s
+</html>
