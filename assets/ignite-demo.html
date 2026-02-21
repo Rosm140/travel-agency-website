@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGNITE - Innovation & Gaming Network</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 50%, #0a0a0a 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .cinzel { font-family: 'Cinzel', serif; }
+
+        .fire-glow {
+            box-shadow: 0 0 20px rgba(255, 68, 0, 0.5), 0 0 40px rgba(255, 68, 0, 0.3);
+            animation: fireFlicker 2s ease-in-out infinite;
+        }
+
+        @keyframes fireFlicker {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 68, 0, 0.5); }
+            50% { box-shadow: 0 0 30px rgba(255, 68, 0, 0.7); }
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 10vw, 7rem);
+            background: linear-gradient(135deg, #ff4400, #ff8800, #ffaa00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: titleGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.3); }
+        }
+
+        .hidden { display: none; }
+    </style>
+</head>
+<body class="text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-black bg-opacity-90 backdrop-blur-md border-b border-orange-900 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 fire-glow rounded-lg flex items-center justify-center bg-gradient-to-br from-orange-600 to-red-600">
+                    <span class="text-2xl">🔥</span>
+                </div>
+                <span class="cinzel text-2xl font-bold text-orange-500">IGNITE</span>
+            </div>
+            <div class="flex space-x-8">
+                <a href="#" onclick="showPage('home')" class="text-orange-500 font-medium">Home</a>
+                <a href="#" onclick="showPage('about')" class="text-gray-300 hover:text-orange-500 font-medium">About</a>
+                <a href="#" onclick="showPage('events')" class="text-gray-300 hover:text-orange-500 font-medium">Events</a>
+                <a href="#" onclick="showPage('contact')" class="text-gray-300 hover:text-orange-500 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home-page" class="pt-16">
+        <section class="min-h-screen flex items-center justify-center px-4">
+            <div class="text-center max-w-4xl">
+                <h1 class="cinzel font-black hero-title mb-6">IGNITE</h1>
+                <p class="text-2xl text-gray-300 mb-4">Innovation & Gaming Network for Interactive Tech Excellence</p>
+                <p class="text-lg text-gray-400 mb-12">"Fire cannot kill a dragon" - Join the most epic student community</p>
+                <button onclick="showPage('events')" class="bg-gradient-to-r from-orange-600 to-red-600 px-8 py-4 rounded-full text-white font-semibold text-lg hover:scale-105 transition-transform">
+                    Explore Events 🔥
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about-page" class="pt-16 hidden min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 py-20">
+            <h1 class="cinzel text-6xl font-bold text-center mb-8 text-orange-500">About IGNITE</h1>
+            <p class="text-center text-xl text-gray-400 mb-16">We choose to win, together.</p>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="cinzel text-3xl font-bold mb-6 text-orange-500">Our Mission 🔥</h2>
+                    <p class="text-gray-300">IGNITE empowers students to push boundaries in technology, gaming, and innovation through hackathons, esports tournaments, and collaborative projects.</p>
+                </div>
+                <div>
+                    <h2 class="cinzel text-3xl font-bold mb-6 text-orange-500">What We Do ⚔️</h2>
+                    <ul class="space-y-3 text-gray-300">
+                        <li>→ <strong>Hackathons:</strong> 48-hour coding battles</li>
+                        <li>→ <strong>Esports Tournaments:</strong> Competitive gaming</li>
+                        <li>→ <strong>Tech Talks:</strong> Learn from industry leaders</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Events Page -->
+    <div id="events-page" class="pt-16 hidden min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 py-20">
+            <h1 class="cinzel text-6xl font-bold text-center mb-8 text-orange-500">Epic Events</h1>
+            <div class="grid md:grid-cols-3 gap-8" id="events-container"></div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact-page" class="pt-16 hidden min-h-screen">
+        <div class="max-w-4xl mx-auto px-4 py-20">
+            <h1 class="cinzel text-6xl font-bold text-center mb-8 text-orange-500">Contact Us</h1>
+            <div class="grid md:grid-cols-2 gap-12">
+                <form class="space-y-4">
+                    <input type="text" placeholder="Name" class="w-full px-4 py-3 bg-gray-800 border border-orange-900 rounded-lg text-white" required>
+                    <input type="email" placeholder="Email" class="w-full px-4 py-3 bg-gray-800 border border-orange-900 rounded-lg text-white" required>
+                    <textarea rows="5" placeholder="Message" class="w-full px-4 py-3 bg-gray-800 border border-orange-900 rounded-lg text-white" required></textarea>
+                    <button type="submit" class="w-full bg-gradient-to-r from-orange-600 to-red-600 px-6 py-4 rounded-lg text-white font-semibold">Send Message 🔥</button>
+                </form>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <span class="text-3xl">📧</span>
+                        <div><h3 class="font-semibold text-white">Email</h3><p class="text-gray-400">ignite@university.edu</p></div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="text-3xl">📱</span>
+                        <div><h3 class="font-semibold text-white">Phone</h3><p class="text-gray-400">+91 98765 43210</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const events = [
+            { icon: '⚔️', title: 'Hackathon 2024', desc: '48-hour coding marathon', date: 'March 15-17, 2024', prize: '₹50,000' },
+            { icon: '🎮', title: 'Esports Championship', desc: 'Ultimate gaming tournament', date: 'March 20, 2024', prize: '₹30,000' },
+            { icon: '💡', title: 'Tech Summit 2024', desc: 'Learn from industry leaders', date: 'April 5, 2024', prize: 'Free Entry' }
+        ];
+
+        function showPage(page) {
+            document.querySelectorAll('[id$="-page"]').forEach(p => p.classList.add('hidden'));
+            document.getElementById(page + '-page').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        const container = document.getElementById('events-container');
+        container.innerHTML = events.map(e => `
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-orange-900 hover:scale-105 transition-transform">
+                <div class="h-48 bg-gradient-to-br from-orange-900 to-red-900 bg-opacity-30 flex items-center justify-center text-7xl">${e.icon}</div>
+                <div class="p-6">
+                    <h3 class="cinzel text-2xl font-bold mb-2 text-orange-500">${e.title}</h3>
+                    <p class="text-gray-400 mb-4">${e.desc}</p>
+                    <div class="text-sm text-gray-500 mb-4">
+                        <div>📅 ${e.date}</div>
+                        <div>💰 ${e.prize}</div>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-orange-600 to-red-600 px-6 py-3 rounded-lg text-white font-semibold">Register Now 🔥</button>
+                </div>
+            </div>
+        `).join('');
+    </script>
+</body>
+</html>
